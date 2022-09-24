@@ -4,7 +4,7 @@ from random import randint
 import pathlib
 from osgeo import gdal
 
-def distort_image(source_path, target_path, x_axis_range, y_axis_range):
+def distort_image(source_path:str, target_path: str, x_axis_range: int, y_axis_range: int):
     ''' 
     This method changes image coordinates by applying translation operations over 
     the tranformation matrix of the source image and saves the new image in the target path.
@@ -81,20 +81,40 @@ def distort_image(source_path, target_path, x_axis_range, y_axis_range):
     
     
 
-def compress_image_loss(path_in, path_out):
+def compress_image_loss(path_in: str, path_out: str):
     '''
     Función que permite comprimir un archivo en formatos loss, esto quiere decir con pérdida de información,
     para formatos TIF e IMG
+
+            Parameters:
+            ----------
+                    path_in (str): path to the source image
+                
+                    path_out (str): path to the target image (the file can be existing or not)
+
+            Returns:
+            --------
+                    None (None): None
     '''
     gdal.Translate( path_out, path_in, creationOptions=["COMPRESS=LZW", "TILED=YES", "DISCARD_LSB=10"])  
         
         
 
     
-def compress_image_lossless(path_in, path_out):
+def compress_image_lossless(path_in: str, path_out: str):
     '''
     Función que permite comprimir un archivo en formatos lossless, esto quiere decir con la menor 
     pérdida de información posible, para formatos TIF e IMG
+
+            Parameters:
+            ----------
+                    path_in (str): path to the source image
+                
+                    path_out (str): path to the target image (the file can be existing or not)
+
+            Returns:
+            --------
+                    None (None): None
 
     '''
     gdal.Translate( path_out, path_in, creationOptions=["COMPRESS=ZSTD", "ZSTD_LEVEL=22"])
