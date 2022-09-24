@@ -29,6 +29,8 @@ conda install -c conda-forge gdal
 
 ## Usage 
 
+Below you will find an example of how to import this library to you codebase.
+
 ```
 
 from ciclon import ciclon
