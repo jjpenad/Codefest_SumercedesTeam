@@ -6,21 +6,20 @@ from osgeo import gdal
 
 def distort_image(source_path:str, target_path: str, x_axis_range: int, y_axis_range: int):
     ''' 
-    This method changes image coordinates by applying translation operations over 
-    the tranformation matrix of the source image and saves the new image in the target path.
+    Este método cambia las coordenadas de la imagen aplicando operaciones de traslación sobre 
+    la matriz de transformación de la imagen fuente y guarda la nueva en la ruta objetivo.
 
-
-            Parameters:
+            Parámetros:
             ----------
-                    source_path (str): path to the source image
+                    source_path (str): ruta a la imagen fuente
                 
-                    target_path (str): path to the target image (the file can be existing or not)
+                    target_path (str): ruta a la imagen destino
 
-                    x_axis_range (int): integer that represents the range for generating a random 
-                                        number for translation on x axis
+                    x_axis_range (int): Entero que representa el rango para generar un númeor aleatorio
+                                        para traslación en el eje x
                     
-                    y_axis_range (int): integer that represents the range for generating a random 
-                                        number for translation on y axis
+                    y_axis_range (int): Entero que representa el rango para generar un númeor aleatorio
+                                        para traslación en el eje y
 
             Returns:
             --------
@@ -86,13 +85,13 @@ def compress_image_loss(path_in: str, path_out: str):
     Función que permite comprimir un archivo en formatos loss, esto quiere decir con pérdida de información,
     para formatos TIF e IMG
 
-            Parameters:
+            Parámetros:
             ----------
-                    path_in (str): path to the source image
+                    path_in (str): ruta a la imagen fuente
                 
-                    path_out (str): path to the target image (the file can be existing or not)
+                    path_out (str): rute a la imagen objetivo 
 
-            Returns:
+            Retorno:
             --------
                     None (None): None
     '''
@@ -106,13 +105,13 @@ def compress_image_lossless(path_in: str, path_out: str):
     Función que permite comprimir un archivo en formatos lossless, esto quiere decir con la menor 
     pérdida de información posible, para formatos TIF e IMG
 
-            Parameters:
+            Parámetros:
             ----------
-                    path_in (str): path to the source image
+                    path_in (str): ruta a la imagen fuente
                 
-                    path_out (str): path to the target image (the file can be existing or not)
+                    path_out (str): rute a la imagen objetivo 
 
-            Returns:
+            Retorno:
             --------
                     None (None): None
 

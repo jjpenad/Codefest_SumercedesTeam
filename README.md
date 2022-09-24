@@ -39,3 +39,5 @@ def demo():
     ciclon.distort_image('images/coordinates.tif', 'images/coordinatesNew.tif', 10000, 20000)
 
 ```
+
+Besides the previous method, the library has compress_image_loss and compress_image_lossless, you will find the docs with vscode recommendations
