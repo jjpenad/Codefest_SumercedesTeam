@@ -11,7 +11,21 @@ with translations over the x and y axis
 
 ## Installation
 
+The first step to use this library is to clone this repo. Then, you will have to install the necessary dependencies for the library in order to work correctly. To do that, please execute the following command:
+
 ```
 pip install rasterio 
 ```
+
+There is another dependecy called gdal that will allow the library to do comprssion operations. In order to get this dependency, please follow the next steps:
+
+1. If you have a Windows machine, you first have to install conda. To do that, please use the following website [Offical Anaconda Download](https://www.anaconda.com/products/distribution). 
+
+2. After installing conda, you must execute this commmand:
+
+```
+conda install -c conda-forge gdal
+```
+
+
 
