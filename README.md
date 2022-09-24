@@ -27,5 +27,13 @@ There is another dependecy called gdal that will allow the library to do comprss
 conda install -c conda-forge gdal
 ```
 
+## Usage 
 
+```
 
+from ciclon import ciclon
+
+def demo():
+    ciclon.distort_image('images/coordinates.tif', 'images/coordinatesNew.tif', 10000, 20000)
+
+```
